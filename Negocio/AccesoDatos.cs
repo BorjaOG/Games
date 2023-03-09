@@ -10,12 +10,13 @@ namespace Negocio
     public class AccesoDatos
     {
         private SqlConnection conexion;
-        private SqlCommand comando;
+        public SqlCommand comando;
         private SqlDataReader lector;
         public SqlDataReader Lector
         {
             get { return lector; }
         }
+
 
         public AccesoDatos()
         {
@@ -25,6 +26,7 @@ namespace Negocio
 
         public void SetearConsulta( string consulta)
         {
+            comando =new SqlCommand();
             comando.CommandType = System.Data.CommandType.Text;
             comando.CommandText = consulta;
         }

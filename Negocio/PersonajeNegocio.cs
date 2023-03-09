@@ -11,47 +11,53 @@ namespace Negocio
 {
     public class PersonajeNegocio
     {
-        private Juego juego;
+        private int idJuego;
 
-        public PersonajeNegocio(Juego juego)
+        public PersonajeNegocio(int idJuego)
         {
-            this.juego = juego;
+            this.idJuego = idJuego;
         }
 
-        public PersonajeNegocio(int id)
-        {
-        }
-
-        public List<Personaje> Listar(Juego juego)
+        public List<Personaje> Listar()
         {
             List<Personaje> listaP = new List<Personaje>();
             AccesoDatos datos = new AccesoDatos();
 
             try
             {
-
-                datos.SetearConsulta("Select P.Nombre, P.habilidad, P.Imagen, P.IdJuego, J.Id, from Personajes P, Juegos J where P.IdJuego = J.Id");
+                datos.SetearConsulta("SELECT P.Nombre, P.habilidad, P.Imagen, P.IdJuego, J.Id FROM Personajes P JOIN Juegos J ON P.IdJuego = J.Id WHERE P.IdJuego = @idJuego");
+                datos.comando.Parameters.Clear();
+                datos.comando.Parameters.AddWithValue("@idJuego", this.idJuego);
                 datos.EjecutarLectura();
-              
-                
-                
+
                 while (datos.Lector.Read())
-                {   
-                   
-                    
+                {
                     Personaje aux = new Personaje();
-                    aux.Nombre = (string)datos.Lector["Nombre"]; 
+                    aux.Nombre = (string)datos.Lector["Nombre"];
                     aux.Habilidad = (string)datos.Lector["Habilidad"];
                     aux.Imagen = (string)datos.Lector["Imagen"];
-                    aux.IdJuego = (string)datos.Lector["IdJuego"];
-                    
-                    
+                    aux.Id = (int)datos.Lector["Id"];
 
-                        listaP.Add(aux);
-                    
-                } 
-                
+                    listaP.Add(aux);
+                }
                 return listaP;
+            }
+            catch (Exception ex)
+            {
+                throw ex;
+            }
+            finally
+            {
+                datos.CerrarConexion();
+            }
+        }
+        public void AgregarP(Personaje personaje)
+        {
+            AccesoDatos datos = new AccesoDatos();
+            try
+            {
+                datos.SetearConsulta("Insert into Personaje (Nombre, Habilidad, Imagen, Id) values ('" + personaje.Nombre + "','" + personaje.Habilidad + "', '" + personaje.Imagen + "','" + personaje.Id + "') ");
+                datos.EjecutarAccion();
             }
             catch (Exception ex)
             {
@@ -65,3 +71,5 @@ namespace Negocio
         }
     }
 }
+
+

@@ -23,25 +23,20 @@ namespace Juegos
             this.juego = juego;
         }
 
-        private Juego Id;
-
-        public frmPersonajes()
-        {
-            InitializeComponent();
-        }
-       
-
         private void frmPersonajes_Load(object sender, EventArgs e)
         {
-            
-            
+
+
             PersonajeNegocio negocio = new PersonajeNegocio(juego.Id);
-            
+
             try
-            {               
-                listaPersonaje = new List<Personaje>();
+            {
+                listaPersonaje = negocio.Listar();
                 dgvPersonajes.DataSource = listaPersonaje;
-                pbPersonajes.Load(listaPersonaje[1].Imagen);                
+                if (listaPersonaje.Count > 0)
+                {
+                    pbPersonajes.Load(listaPersonaje[0].Imagen);
+                }
 
             }
             catch (Exception ex)
@@ -49,7 +44,7 @@ namespace Juegos
 
                 MessageBox.Show(ex.ToString());
             }
-            
+
         }
 
         private void dgvPersonajes_SelectionChanged(object sender, EventArgs e)
@@ -69,5 +64,16 @@ namespace Juegos
                 pbPersonajes.Load("https://worldwellnessgroup.org.au/wp-content/uploads/2020/07/placeholder.png");
             }
         }
+
+
+
+        private void btnAgregarP_Click(object sender, EventArgs e)
+        {
+            frmAltaPersonaje alta = new frmAltaPersonaje();
+
+
+
+        }
+       
     }
 }

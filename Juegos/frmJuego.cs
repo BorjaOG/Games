@@ -12,11 +12,11 @@ using Negocio;
 
 namespace Juegos
 {
-    public partial class Form1 : Form
+    public partial class frmJuego : Form
     {
 
         private List<Juego> listaJuego;
-        public Form1()
+        public frmJuego()
         {
             InitializeComponent();
         }

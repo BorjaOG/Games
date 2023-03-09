@@ -1,6 +1,6 @@
 ﻿namespace Juegos
 {
-    partial class Form1
+    partial class frmJuego
     {
         /// <summary>
         /// Required designer variable.
@@ -40,18 +40,20 @@
             // 
             this.dgvJuegos.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dgvJuegos.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvJuegos.GridColor = System.Drawing.SystemColors.ActiveCaption;
             this.dgvJuegos.Location = new System.Drawing.Point(12, 72);
             this.dgvJuegos.Name = "dgvJuegos";
-            this.dgvJuegos.Size = new System.Drawing.Size(596, 247);
+            this.dgvJuegos.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.DisableResizing;
+            this.dgvJuegos.Size = new System.Drawing.Size(615, 247);
             this.dgvJuegos.StandardTab = true;
             this.dgvJuegos.TabIndex = 0;
             this.dgvJuegos.SelectionChanged += new System.EventHandler(this.dgvJuegos_SelectionChanged);
             // 
             // pbJuego
             // 
-            this.pbJuego.Location = new System.Drawing.Point(637, 72);
+            this.pbJuego.Location = new System.Drawing.Point(633, 72);
             this.pbJuego.Name = "pbJuego";
-            this.pbJuego.Size = new System.Drawing.Size(245, 247);
+            this.pbJuego.Size = new System.Drawing.Size(249, 247);
             this.pbJuego.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pbJuego.TabIndex = 1;
             this.pbJuego.TabStop = false;
@@ -80,12 +82,14 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.SystemColors.Control;
             this.ClientSize = new System.Drawing.Size(894, 450);
             this.Controls.Add(this.btnagregar);
             this.Controls.Add(this.btnPersonaje);
             this.Controls.Add(this.pbJuego);
             this.Controls.Add(this.dgvJuegos);
             this.Name = "Form1";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Form1";
             this.Load += new System.EventHandler(this.Form1_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dgvJuegos)).EndInit();

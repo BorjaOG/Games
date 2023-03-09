@@ -30,6 +30,7 @@
         {
             this.dgvPersonajes = new System.Windows.Forms.DataGridView();
             this.pbPersonajes = new System.Windows.Forms.PictureBox();
+            this.btnAgregarP = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dgvPersonajes)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbPersonajes)).BeginInit();
             this.SuspendLayout();
@@ -53,14 +54,25 @@
             this.pbPersonajes.TabIndex = 1;
             this.pbPersonajes.TabStop = false;
             // 
+            // btnAgregarP
+            // 
+            this.btnAgregarP.Location = new System.Drawing.Point(87, 349);
+            this.btnAgregarP.Name = "btnAgregarP";
+            this.btnAgregarP.Size = new System.Drawing.Size(137, 36);
+            this.btnAgregarP.TabIndex = 2;
+            this.btnAgregarP.Text = "Agregar Personaje";
+            this.btnAgregarP.UseVisualStyleBackColor = true;
+            // 
             // frmPersonajes
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.btnAgregarP);
             this.Controls.Add(this.pbPersonajes);
             this.Controls.Add(this.dgvPersonajes);
             this.Name = "frmPersonajes";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "frmPersonajes";
             this.Load += new System.EventHandler(this.frmPersonajes_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dgvPersonajes)).EndInit();
@@ -73,5 +85,6 @@
 
         private System.Windows.Forms.DataGridView dgvPersonajes;
         private System.Windows.Forms.PictureBox pbPersonajes;
+        private System.Windows.Forms.Button btnAgregarP;
     }
 }

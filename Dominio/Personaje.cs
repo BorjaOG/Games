@@ -12,11 +12,7 @@ namespace Dominio
         
         public string Nombre { get; set; }
         public string Habilidad { get; set; }
-        public string Imagen { get; set; }
-        public string IdJuego { get; set; }
-
-       
-
-        
+        public string Imagen { get; set; }      
+        public int Id { get; set; }
     }
 }

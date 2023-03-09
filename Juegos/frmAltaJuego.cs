@@ -22,29 +22,8 @@ namespace Juegos
         private void btncancelar_Click(object sender, EventArgs e)
         {
             Close();
-        }
+        } 
+        
 
-        private void btnaceptar_Click(object sender, EventArgs e)
-        {
-            
-            Juego nuevo = new Juego();
-            JuegoNegocio negocio = new JuegoNegocio();
-            try
-            {
-                nuevo.Nombre = txbnombre.Text;
-                nuevo.Genero = txbgenero.Text;
-                nuevo.Creador = txbcreador.Text;
-
-                negocio.Agregar(nuevo);
-                MessageBox.Show("Juego Agregado exitosamente");
-                Close();
-
-            }
-            catch (Exception ex)
-            {
-
-                MessageBox.Show(ex.ToString());
-            }
-        }
     }
 }
