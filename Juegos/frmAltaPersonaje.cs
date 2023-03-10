@@ -45,9 +45,9 @@ namespace Juegos
         }
        
 
-        private void btnAceptarP_Click(object sender, EventArgs e)
+        public void btnAceptarP_Click(object sender, EventArgs e)
         {
-            PersonajeNegocio negocio = new PersonajeNegocio(1);
+            PersonajeNegocio negocio = new PersonajeNegocio(0);
             try
             {
                 Personaje nuevoPersonaje = new Personaje();
@@ -57,6 +57,7 @@ namespace Juegos
 
                 negocio.AgregarP(nuevoPersonaje);
                 MessageBox.Show("El personaje se ha guardado correctamente.");
+                this.DialogResult = DialogResult.OK;
                 this.Close();
             }
             catch (Exception ex)

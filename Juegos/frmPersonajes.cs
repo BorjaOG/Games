@@ -10,6 +10,8 @@ using System.Windows.Forms;
 using Dominio;
 using Negocio;
 
+
+
 namespace Juegos
 {
     public partial class frmPersonajes : Form
@@ -67,13 +69,13 @@ namespace Juegos
 
 
 
+
         private void btnAgregarP_Click(object sender, EventArgs e)
         {
-            frmAltaPersonaje alta = new frmAltaPersonaje();
+            frmAltaPersonaje frmAltaPersonaje = new frmAltaPersonaje();
 
 
 
         }
-       
     }
 }
