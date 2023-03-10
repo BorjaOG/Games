@@ -70,5 +70,8 @@ namespace Juegos
         {
 
         }
+
+        // evento para agregar Personajes
+
     }
 }
