@@ -65,7 +65,7 @@ namespace Juegos
                 MessageBox.Show("Error al guardar el personaje: " + ex.Message);
             }
         }
-
+        // cargar el frmAltaPersonajes
         private void AgregarJ_Load(object sender, EventArgs e)
         {
 
