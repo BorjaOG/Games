@@ -64,7 +64,7 @@
             this.btnPersonaje.Name = "btnPersonaje";
             this.btnPersonaje.Size = new System.Drawing.Size(110, 23);
             this.btnPersonaje.TabIndex = 2;
-            this.btnPersonaje.Text = "Ver Personajes";
+            this.btnPersonaje.Text = "View characters";
             this.btnPersonaje.UseVisualStyleBackColor = true;
             this.btnPersonaje.Click += new System.EventHandler(this.btnPersonaje_Click);
             // 
@@ -74,11 +74,11 @@
             this.btnagregar.Name = "btnagregar";
             this.btnagregar.Size = new System.Drawing.Size(151, 37);
             this.btnagregar.TabIndex = 3;
-            this.btnagregar.Text = "Agregar";
+            this.btnagregar.Text = "Add";
             this.btnagregar.UseVisualStyleBackColor = true;
             this.btnagregar.Click += new System.EventHandler(this.btnagregar_Click);
             // 
-            // Form1
+            // frmJuego
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -88,7 +88,7 @@
             this.Controls.Add(this.btnPersonaje);
             this.Controls.Add(this.pbJuego);
             this.Controls.Add(this.dgvJuegos);
-            this.Name = "Form1";
+            this.Name = "frmJuego";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Form1";
             this.Load += new System.EventHandler(this.Form1_Load);

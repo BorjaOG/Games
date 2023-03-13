@@ -32,11 +32,11 @@ namespace Negocio
                 {
                     Juego aux = new Juego();
                     aux.Id = (int)lector["Id"];
-                    aux.Nombre = (string)lector["Nombre"];
-                    aux.Genero = (string)lector["Genero"];
-                    aux.Creador = (string)lector["Creador"];
-                    aux.Imagen = (string)lector["imagen"];
-                    aux.Fecha_Lanzamiento = (string)lector["Fecha_Lanzamiento"];
+                    aux.Name = (string)lector["Nombre"];
+                    aux.Type = (string)lector["Genero"];
+                    aux.Developer = (string)lector["Creador"];
+                    aux.Image = (string)lector["imagen"];
+                    aux.Date = (string)lector["Fecha_Lanzamiento"];
 
                     lista.Add(aux);
                 }
@@ -55,7 +55,7 @@ namespace Negocio
             AccesoDatos datos = new AccesoDatos();
             try
             {
-                datos.SetearConsulta("Insert into Juegos (Nombre, Genero, Creador) values ('"+ nuevo.Nombre +"','"+ nuevo.Genero +"', '"+nuevo.Creador +"') ");
+                datos.SetearConsulta("Insert into Juegos (Nombre, Genero, Creador) values ('"+ nuevo.Name +"','"+ nuevo.Type +"', '"+nuevo.Developer +"') ");
                 datos.EjecutarAccion();
             }
             catch (Exception ex)

@@ -26,14 +26,14 @@ namespace Juegos
             JuegoNegocio negocio = new JuegoNegocio();
             listaJuego = negocio.Listar();
             dgvJuegos.DataSource = listaJuego;
-            pbJuego.Load(listaJuego[0].Imagen);
+            pbJuego.Load(listaJuego[0].Image);
 
         }
 
         private void dgvJuegos_SelectionChanged(object sender, EventArgs e)
         {
             Juego seleccionado = (Juego)dgvJuegos.CurrentRow.DataBoundItem;
-            CargarImagen(seleccionado.Imagen);
+            CargarImagen(seleccionado.Image);
         }
 
         private void CargarImagen(string imagen)

@@ -56,12 +56,13 @@
             // 
             // btnAgregarP
             // 
-            this.btnAgregarP.Location = new System.Drawing.Point(87, 349);
+            this.btnAgregarP.Location = new System.Drawing.Point(40, 345);
             this.btnAgregarP.Name = "btnAgregarP";
             this.btnAgregarP.Size = new System.Drawing.Size(137, 36);
             this.btnAgregarP.TabIndex = 2;
-            this.btnAgregarP.Text = "Agregar Personaje";
+            this.btnAgregarP.Text = "Add Character";
             this.btnAgregarP.UseVisualStyleBackColor = true;
+            this.btnAgregarP.Click += new System.EventHandler(this.btnAgregarP_Click_1);
             // 
             // frmPersonajes
             // 
