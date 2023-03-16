@@ -75,7 +75,7 @@ namespace Juegos
             frmAltaPersonaje frmAltaPersonaje = new frmAltaPersonaje();
 
 
-            //agregar personaje..
+            //agregar personaje...
         }
 
         private void btnAgregarP_Click_1(object sender, EventArgs e)
